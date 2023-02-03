@@ -1,0 +1,48 @@
+-- shorthands for love.graphics etc
+require "src/lvutils" 
+
+local centerX, centerY
+local youarehereText, yahSizeWidht, yahSizeHeight
+local font 
+local width, height
+
+function love.load()
+  width, height = gr.getDimensions()
+  centerX = width/2; centerY = height/2
+  font = gr.newFont("data/font.otf", 24)
+  gr.setFont(font)
+  youarehereText = gr.newText(font, "You are here")
+  yahSizeWidth, yahSizeHeight = youarehereText:getDimensions()
+end
+
+function love.update(dt)
+-- runnning at 2 frames a second
+  ti.sleep(0.5-dt)
+end
+
+function drawDirections()
+  local hr, wr
+  hr = 100*width/height; wr = 100*height/width
+  gr.polygon("line", centerX,1, 2*centerX, centerY, centerX, 2*centerY, 1, centerY)
+  -- top triangle
+  gr.polygon("fill", centerX, 1, centerX+hr, 100, centerX-hr, 100)
+  -- buttom triangle 
+  gr.polygon("fill", centerX, height, centerX-hr, height-100, centerX+hr, height-100)
+  -- left triangle
+  gr.polygon("fill", 1, centerY, 100, centerY+wr, 100, centerY-wr)
+  -- right triangle
+  gr.polygon("fill", width, centerY, width-100, centerY-wr, width-100, centerY+wr)
+  -- writing indications
+  gr.setColor(0, 0, 0, 1)
+  gr.print("what", centerX-20, 40)
+  gr.print("of what", centerX-40, height-80)
+  gr.print("how", 35, centerY-20)
+  gr.print("why", width-80, centerY-20)
+  gr.setColor(1, 1, 1, 1)
+end
+
+function love.draw() 
+  gr.print("After Aquinas", 20, 20)
+  gr.print("you are here", centerX-yahSizeWidth/2, centerY)
+  drawDirections()
+end

@@ -1,0 +1,27 @@
+require "src/lautils"
+require "src/lvutils"
+
+tmd = {
+pageNb = 1,
+
+slowdown = function(dt) 
+  if dt < 0.5 then ti.sleep(0.5-dt) end
+end,
+
+drawPage = function()
+  local c = tmd.pageNb/12.0
+  gr.setBackgroundColor(c, c, c)
+end,
+
+clicked = function(x,y)
+  local w = gr.getWidth()
+  local h = gr.getHeight()
+  if x < 100 and y > h-100 then
+    tmd.pageNb = tmd.pageNb - 1
+  elseif x > w-100 and y > h-100 then
+    tmd.pageNb = tmd.pageNb + 1
+  end
+end
+}
+
+
