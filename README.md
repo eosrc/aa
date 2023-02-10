@@ -14,6 +14,7 @@ a dozen pages of citations when one clicks a star. The
 code for the app is the content of this repository.
 
 Here is a screenshot.
+
 ![screenshot] (./screenshot_aa-v02.png) 
 
 There is more info on the wiki section.
