@@ -7,7 +7,13 @@ help loving St. Thomas.
 
 *—Flannery O’Connor, The Habit of Being*
 
-# release dir
+## Prerequisites
+
+You should the latest version of Love2d here:
+
+https://love2d.org/#download
+
+## release dir
 
 The release directory contains a .love file that shows
 a dozen pages of citations when one clicks a star. The
