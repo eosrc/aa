@@ -9,7 +9,7 @@ help loving St. Thomas.
 
 ## Prerequisites
 
-You should the latest version of Love2d here:
+You should get the latest version of Love2d here:
 
 https://love2d.org/#download
 
