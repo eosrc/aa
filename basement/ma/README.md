@@ -10,7 +10,7 @@ Since then, I have 'discovered' Forth and Meta Aquinas is going to be
 Christian Wisdom using Forth as a language and philosophy.
 
 Last week, something almost spooky happened. 
-I watched <a href=https://www.youtube.com/watch?v=81bkIqPpe0g>Chuck Moore
+I watched <a href="https://www.youtube.com/watch?v=81bkIqPpe0g">Chuck Moore
 Fireside chat Nov 2020 ~ around 10-17 min</a> and couldn't help but notice 
 the similarity with After Aquinas. Moore presents a sample of around 
 seventy random quotes that he has collected. They stay on the screen in 
