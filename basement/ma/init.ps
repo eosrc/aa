@@ -1,0 +1,25 @@
+%!
+
+/Grundschrift-Normal findfont	% Get the basic font
+20 scalefont		% Scale the font to 20 points
+setfont			% Make it the current font
+
+/filesize { status 
+    { pop pop == pop } 
+    {(file not found) == } 
+  ifelse } 
+def
+
+/graypage {
+newpath
+.1 setgray
+0 0 612 792 rectfill
+.95 setgray
+0 0 moveto
+306 396 translate
+0 0 moveto
+} def
+
+/shgp { showpage graypage } def
+
+graypage

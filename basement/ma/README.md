@@ -33,6 +33,9 @@ will be able to draw near to Him.
 Chuck Moore has been an apostle of simplicity for more than fifty years.
 I don't know his religion but I can live with Forth and his philosophy.
 
+I have added some Postscript files. Postscript is probably the most 
+successful dialect of Forth. These files print the Rule of St. Romuald.
+
 I imagine in the future this directory will become a repository of itself,
 but I am not ready for that yet.
 

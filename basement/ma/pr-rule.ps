@@ -1,0 +1,25 @@
+%!
+
+% if you want to generate a pdf with ps2pdf, you needs to
+% pass the -P switch and -sFONTPATH=./ on the command line
+
+% needs to have include init.ps before running this script
+% shgp is defined in init.ps
+
+/shgp where not { (init.ps) run } { pop } ifelse
+
+% include the statements of the rule of Romuald
+(rrule.ps) run
+
+/margin -300 def
+
+/rr { 
+  /cnt exch def
+  /ypos { 350 -25 cnt mul add } def 
+  margin ypos moveto 
+  rrule cnt get show 
+} def
+
+0 1 17 { rr } for
+
+showpage
