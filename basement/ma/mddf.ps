@@ -1,0 +1,28 @@
+%! 
+
+% again to generate the pdf with ps2pdf you need
+% to add to the command line -P -sFONTPATH=./
+
+% this is just an example of postscript code
+% to display a jpg image
+
+(init.ps) run
+
+-140 240 moveto
+(The late Fathers Basil and Paul) show
+0 0 moveto
+
+gsave
+-180 -215 translate
+356 430 scale 
+356
+430
+8
+[356 0 0 -430 0 430]
+(frbp.jpg) (r) file /DCTDecode filter
+false
+3
+colorimage 
+grestore
+
+showpage
