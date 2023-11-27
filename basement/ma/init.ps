@@ -17,9 +17,35 @@ newpath
 .95 setgray
 0 0 moveto
 306 396 translate
+% draw a cross with the foot a the origin
+0 0 moveto
+0 100 lineto stroke
+-40 75 moveto
+40 75 lineto stroke
 0 0 moveto
 } def
 
 /shgp { showpage graypage } def
+
+/ecross {
+gsave
+3 setlinewidth
+.1 setgray
+0 0 moveto
+0 100 lineto stroke
+-40 75 moveto
+40 75 lineto stroke
+.95 setgray
+1 setlinewidth
+grestore
+} def
+
+/dcross {
+0 0 moveto
+0 100 lineto stroke
+-40 75 moveto
+40 75 lineto stroke
+0 0 moveto
+} def
 
 graypage

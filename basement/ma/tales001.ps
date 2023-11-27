@@ -1,9 +1,11 @@
 %! % we use only the necessary to indicate a postscript file
 %                                                              | 
-% the previous line mark the 64th character of the line
+% the previous line marks the 64th character of the line
 
 % as usual to generate a pdf with ps2pdf you need to add 
-% to the command line -P and -sFONTPATH=./ 
+% to the command line the switches -P and -sFONTPATH=./ 
+% or to view it with ghostscript:
+% gs -q -P -sFONTPATH=./ -dBATCH tales001.ps
 
 % Tales of Metascript.ps is some postscript code to 
 % implement ideas for Meta Aquinas which is the Forth version 
@@ -30,5 +32,7 @@
 (place in this world for ugly mathematics.) show
 -200 140 moveto
 (+G.H. Hardy) show
+
+dcross
 
 showpage
