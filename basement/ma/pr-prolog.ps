@@ -1,0 +1,33 @@
+%!
+
+% Here's 14 verses from the Prologue to the Gospel of John.
+% Why do I think that there is nothing like it that was
+% ever written? I asked myself this question and I thought
+% that the 1st and 14th verses explain a lot: The Word was
+% God and The Word became flesh.
+% We can't imagine anything like this about God, it has to 
+% be revealed.
+
+% if you want to generate a pdf with ps2pdf, you needs to
+% pass the -P switch and -sFONTPATH=./ on the command line
+
+% needs to have include init.ps before running this script
+% shgp is defined in init.ps
+
+/shgp where not { (init.ps) run } { pop } ifelse
+
+% include the prologue of the gospel of John
+(prolog.ps) run
+
+/margin -280 def
+
+/pjp { 
+  /cnt exch def
+  /ypos { 350 -25 cnt mul add } def 
+  margin ypos moveto 
+  jp cnt get show 
+} def
+
+0 1 29 { pjp } for
+
+showpage
