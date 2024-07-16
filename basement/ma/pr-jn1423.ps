@@ -1,0 +1,18 @@
+%!
+
+/shgp where not { (init.ps) run } { pop } ifelse
+
+(jn1423.ps) run
+
+/margin -200 def
+
+/rr { 
+  /cnt exch def
+  /ypos { 200 -25 cnt mul add } def 
+  margin ypos moveto 
+  jn1423 cnt get show 
+} def
+
+0 1 4 { rr } for
+
+showpage
